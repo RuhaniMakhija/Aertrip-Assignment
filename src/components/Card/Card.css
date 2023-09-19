@@ -1,0 +1,79 @@
+:root {
+    --white: color(display-p3 1 1 1);
+    --btnTxt: color(display-p3 0 0.62745 0.65882);
+    --aertripColor: color(display-p3 0 0.8 0.6);
+}
+
+.main-container-card{
+    padding: 20px 10px;
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+
+}
+
+
+.card-left-container{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-name-box{
+    display: flex;
+    gap: 12px;
+}
+.num{
+    margin-right: 15px;
+    color: var(--aertripColor);
+}
+.icon{
+    color: var(--aertripColor);
+}
+.icon-info{
+    display: flex;
+    align-items: center;
+
+}
+
+.time-deatils{
+    display: flex;
+    justify-content: space-between;
+}
+.card-center-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.route-details{
+    display: flex;
+}
+
+.card-right-container{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.fares-btn{
+    min-width: 90px;
+    border: none;
+    height: 36px;
+    padding: 1px;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-left: 15px;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--btnTxt), var(--aertripColor)); 
+}
+
+.ft{
+    color: var(--aertripColor);
+}

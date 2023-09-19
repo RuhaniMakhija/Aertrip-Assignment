@@ -1,0 +1,155 @@
+/* varibles */
+:root {
+    --btnTxt: color(display-p3 0 0.62745 0.65882);
+    --aertripColor: color(display-p3 0 0.8 0.6);
+    --btnTxtDark: color(display-p3 0.16078 0.6902 0.71373);
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    color: white;
+    padding: 10px 0;
+    z-index: 100; 
+}
+/* main container */
+.header-container{
+    display: flex;
+    background-image: linear-gradient(to right, var(--btnTxt), var(--aertripColor));
+    justify-content: space-around;
+    align-items: center;
+}
+.shodow{
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* nav left section  */
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+/* nav middle section  */
+.nav-center-flight{
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #00D5C2;
+    border: none;
+    color: white;
+}
+.margin{
+    margin: 0 20px;
+}
+.nav-center-btn{
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* nav right section  */
+
+.nav-right-section{
+    display: flex;
+    align-items: center;
+}
+.nav-right-img{
+    width: 39px;
+    height: 36px;
+    border-radius: 50%;
+}
+.nav-right{
+    margin: 0 20px;
+    color: white;
+}
+
+
+/* Flight Details Section */
+.info-section{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+    padding: 20px 10px;
+}
+.info-section-left{
+    display: flex;
+}
+.info{
+    display: flex;
+    margin: 0 20px;
+    justify-content: space-around;
+    align-items: center;
+    width: 95px;
+    
+}
+.info-section-right{
+    display: flex;
+}
+.down-arrow-icon{
+    color: gray;
+    font-size: 13px;
+}
+
+.recent{
+    margin-right: 10px;
+}
+
+
+
+
+
+.flight-details-container{
+    display: flex;
+    padding: 20px 10px;
+    margin: 0 50px;
+    align-items: center;
+}
+
+.input-info{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    height: 66px;
+    width: 25%;
+}
+
+.city-input{
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    padding: 5px 0; 
+    font-size: 21px;
+    padding-top: 5px;
+    font-weight: 600;
+    padding-bottom: 12px;
+    width: 350px;
+}
+.fixed-placeholder {
+    position: absolute;
+    top: 168px;
+    left: 290px;
+    padding: 5px;
+    color: #999; 
+    pointer-events: none; 
+    user-select: none; 
+}
+.search-btn{
+    min-width: 110px;
+    height: 45px;
+    padding: 11px 28px;
+    margin-top: 6px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--btnTxtDark), var(--aertripColor));
+}
+  
+  
+  
+  
+  
+  
+  
