@@ -8,8 +8,6 @@ const App = () => {
   return (
     <div>
       <Header/>
-      {/* <Filters/>s */}
-      
     </div>
   )
 }
