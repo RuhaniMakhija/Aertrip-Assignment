@@ -2,14 +2,12 @@ import React from 'react'
 import "./Card.css";
 import { BiMessageRounded } from "react-icons/bi";
 import { SlBag } from "react-icons/sl";
-import logo from "../../images/indigo.png"
 
 
+// Card component that takes various props to display flight information.
 const Card = ({img,al,dt,ft,at,fr,to,price}) => {
-    // var {at,fr,to}=card;
-
-    // console.log(card);
   return (
+    // Main container for the card.
     <div className='main-container-card'>
       <div className='card-left-container'>
         <div className='logo-name-box'>

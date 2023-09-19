@@ -1,3 +1,4 @@
+/* Define custom CSS variables for color values */
 :root {
     --white: color(display-p3 1 1 1);
     --btnTxt: color(display-p3 0 0.62745 0.65882);

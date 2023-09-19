@@ -14,42 +14,41 @@ import Filters from '../Filters/Filters';
 
 
 const Header = () => {
-    const [fromCity, setFromCity] = useState('');
-    const [toCity, setToCity] = useState('');
-    const [selectedDate, setSelectedDate] = useState('');
+  // States for input values
+  const [fromCity, setFromCity] = useState('');
+  const [toCity, setToCity] = useState('');
+  const [selectedDate, setSelectedDate] = useState('');
 
 
-    const [filteredFlights, setFilteredFlights] = useState([]);
-    const [tempFlights,setTempFlights]=useState([]);
+  const [filteredFlights, setFilteredFlights] = useState([]);
+  const [tempFlights,setTempFlights]=useState([]);
 
-    let arr=[];
-    let flight=Aertrip.data.flights;
+  let arr=[];
+  let flight=Aertrip.data.flights;
     
-    
-   
-    
-
-    const airlineMapping = {
-        '6E': {
-            name: 'IndiGo Airlines',
-            logo: indigo,
-        },
-        'AI': {
-            name: 'Air India',
-            logo: airindia, 
-        },
-        'UK': {
-            name: 'Vistara',
-            logo: vistara,
-        },
-    };
+    // Mapping of airline codes to their names and logos
+  const airlineMapping = {
+      '6E': {
+          name: 'IndiGo Airlines',
+          logo: indigo,
+      },
+      'AI': {
+          name: 'Air India',
+          logo: airindia, 
+      },
+      'UK': {
+          name: 'Vistara',
+          logo: vistara,
+      },
+  };
 
    
 
-    const [sortBy, setSortBy] = useState('Price'); // Default sorting by Price
+    const [sortBy, setSortBy] = useState('Price'); 
     const [isLowToHigh, setIsLowToHigh] = useState(true); 
 
 
+    // Function to fetch flight data based on from and to cities
     const getFlight=(from,to)=>{
         flight.map((e)=>{
             let j=e.results.j;
@@ -80,42 +79,41 @@ const Header = () => {
     }
 
     
-    useEffect(() => {
-        getFlight(fromCity, toCity); // Call getFlight with the initial values of fromCity and toCity
-      }, []); 
+  useEffect(() => {
+      getFlight(fromCity, toCity); // Call getFlight with the initial values of fromCity and toCity
+    }, []); 
 
    
    
 
 
-    useEffect(()=>{
-        console.log(filteredFlights);
-    },[filteredFlights])
+  useEffect(()=>{
+      console.log(filteredFlights);
+  },[filteredFlights])
 
 
-    const selectDate = (date) => {
-        
-        setSelectedDate(date);
-    };
+  const selectDate = (date) => {
+      setSelectedDate(date);
+  };
 
-    let apdet=flight[0].results.apdet;
-    const handleSearch=()=>{
-        
-        let from ="";
-        let to="";
-        for(let item in apdet){
-            if(apdet[item].c==fromCity){
-                // console.log(item);
-                from=item;
-            }
-            if(apdet[item].c==toCity){
-                // console.log(item);
-                to=item;
-            }
-        }
-        getFlight(from,to);
-        arr.sort((a, b) => a.price - b.price);
-  
+  let apdet=flight[0].results.apdet;
+
+     // Function to handle flight search
+  const handleSearch=()=>{
+      
+      let from ="";
+      let to="";
+      for(let item in apdet){
+          if(apdet[item].c==fromCity){
+              from=item;
+          }
+          if(apdet[item].c==toCity){
+              to=item;
+          }
+      }
+      getFlight(from,to);
+      arr.sort((a, b) => a.price - b.price);
+
 
     setFilteredFlights(arr);
     

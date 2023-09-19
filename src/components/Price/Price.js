@@ -4,22 +4,27 @@ import { AiFillCaretUp } from "react-icons/ai";
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import InputRange from 'react-input-range';
-import 'react-input-range/lib/css/index.css'; // Import the CSS
+import 'react-input-range/lib/css/index.css'; 
 
 const Price = ({priceRange,onPriceChange}) => {
-    const [icon,setIcon]=useState(false);
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const handleDivClick = () => {
-        setIcon(!icon);
-        setIsDropdownOpen(!isDropdownOpen);
-     };
-    
 
-     const handleClearPrice = () => {
-        const defaultPriceRange = { min: 568, max: 16948 }; // Replace with your default price range values
-        onPriceChange(defaultPriceRange); // Call the function to update the state
-        setIsDropdownOpen(!isDropdownOpen);
-      };
+  // States for managing the dropdown
+  const [icon,setIcon]=useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  // Function to handle the click on the dropdown div
+  const handleDivClick = () => {
+      setIcon(!icon);
+      setIsDropdownOpen(!isDropdownOpen);
+    };
+
+
+  // Function to clear the price range
+  const handleClearPrice = () => {
+    const defaultPriceRange = { min: 568, max: 16948 }; 
+    onPriceChange(defaultPriceRange); 
+    setIsDropdownOpen(!isDropdownOpen);
+  };
   return (
     <div>
       <div 
@@ -41,9 +46,12 @@ const Price = ({priceRange,onPriceChange}) => {
                 <InputRange
                     draggableTrack
                     formatLabel={(value) => `₹${value}`}
-                    maxValue={16948} // Max price
-                    minValue={568} // Min price
-                    step={10} // Price step
+                    // Max price
+                    maxValue={16948} 
+                    // Min price
+                    minValue={568} 
+                    // Price step
+                    step={10} 
                     value={priceRange}
                     onChange={onPriceChange}
                 />

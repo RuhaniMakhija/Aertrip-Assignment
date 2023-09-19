@@ -1,3 +1,4 @@
+/* Define custom CSS variables for color values */
 :root {
     --blackColor-04: color(display-p3 0 0 0 / 4%);
     --blackColor-3: color(display-p3 0 0 0 / 30%);
